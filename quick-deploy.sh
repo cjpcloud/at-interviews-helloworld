@@ -56,7 +56,7 @@ docker push \
 
 helm upgrade \
     --install \
-    --namespace $NAMESPACE
+    --namespace $NAMESPACE \
     --create-namespace \
     helloworld \
     --set image.tag=$COMMIT_ID \
