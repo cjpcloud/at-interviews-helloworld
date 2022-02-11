@@ -30,6 +30,6 @@
 
 4. Plug that address into your web-browser, and the test page should show up.  If it complains about 'Address not found', give it a couple of minutes for DNS to catch up and try again! 
 
-
+5. If you see a message about '<error: endpoints "default-http-backend" not found>', you can safely ignore that.  
 
 .
