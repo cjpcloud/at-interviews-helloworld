@@ -37,7 +37,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
 ingress:
@@ -51,7 +51,6 @@ ingress:
     - host: chart-example.local
       paths:
         - path: /*
-          pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
