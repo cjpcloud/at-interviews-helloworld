@@ -3,9 +3,13 @@ Welcome!  If you're cloning this repo, in all likelihood you are starting the QA
 
 # Recommended Tooling (for local deployment/testing)
 We recommend having the following tools to hand: 
+
 (Docker)[https://www.docker.com/products/docker-desktop]
+
 (AWS CLI)[https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html]
+
 (Kubectl)[https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos]
+
 (Helm)[https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos]
 
 # AWS Console Access
@@ -35,11 +39,12 @@ This should output something similar to:
 
 # Manual Build/Deploy Steps
 Our toy application is already able to be built, pushed, and deployed locally. We've got the particulars crammed into the `local-deploy.sh` script, but if you'd prefer a longer-form rundown of what's going on where, read on! 
+
 ## Build
 
 Confirm all desired changes to the toy application are committed locally (not necessarily pushed), and then:
 ```
-`$ export COMMIT_ID=$(git rev-parse --verify --short HEAD)` # This gives us a short, unique tag that we'll use when building/tagging the Docker image
+$ export COMMIT_ID=$(git rev-parse --verify --short HEAD) # This gives us a short, unique tag that we'll use when building/tagging the Docker image
 
 ```
 $ docker build \
