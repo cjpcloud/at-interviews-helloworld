@@ -47,6 +47,7 @@ Confirm all desired changes to the toy application are committed locally (not ne
 $ export COMMIT_ID=$(git rev-parse --verify --short HEAD) # This gives us a short, unique tag that we'll use when building/tagging the Docker image
 
 ```
+```
 $ docker build \
     --no-cache \
     --build-arg GIT_COMMIT=$COMMIT_ID \
