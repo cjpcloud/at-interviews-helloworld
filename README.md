@@ -4,13 +4,13 @@ Welcome!  If you're cloning this repo, in all likelihood you are starting the QA
 # Recommended Tooling (for local deployment/testing)
 We recommend having the following tools to hand: 
 
-(Docker)[https://www.docker.com/products/docker-desktop]
+[Docker](https://www.docker.com/products/docker-desktop)
 
-(AWS CLI)[https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html]
+[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-(Kubectl)[https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos]
+[Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos)
 
-(Helm)[https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos]
+[Helm](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos)
 
 # AWS Console Access
 You should have received a username and (temporary) password from HR.  With that, you can log into the [AWS Console](at-interviews.signin.aws.amazon.com/) and take a look around, if you are so inclined.  
