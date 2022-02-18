@@ -10,7 +10,7 @@ We recommend having the following tools to hand:
 
 [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos)
 
-[Helm](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos)
+[Helm](https://helm.sh)
 
 # AWS Console Access
 You should have received a username and (temporary) password from HR.  With that, you can log into the [AWS Console](at-interviews.signin.aws.amazon.com/) and take a look around, if you are so inclined.  
