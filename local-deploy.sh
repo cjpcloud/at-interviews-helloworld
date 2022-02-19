@@ -9,7 +9,8 @@ AWS_ACCOUNT="310228935478"
 
 # This confirms we're pointing at the appropriate AWS account before trying
 # to do anything
-CURRENT_AWS_TARGET=$(aws sts get-caller-identity \
+CURRENT_AWS_TARGET=$(aws --profile at-interviews \
+    sts get-caller-identity \
     | grep Account \
     | awk -F: '{print $2}' \
     | tr -d \"\,\ \
@@ -36,12 +37,18 @@ echo commit ID is $COMMIT_ID
 # This updates your local ~/.kube/config file with authentication info
 # for our test EKS cluster
 aws eks update-kubeconfig \
+    --profile at-interviews \
     --region us-west-2 \
     --name at-interviews-cluster
+
+kubectl config \
+    use-context \
+    arn:aws:eks:us-west-2:310228935478:cluster/at-interviews-cluster
 
 # Then we log in to the Elastic Container Registry (ECR) so we have an 
 # AWS-accessible place to push the Docker container we're about to build...
 aws ecr get-login-password \
+    --profile at-interviews \
     --region us-west-2 \
     | docker login \
     --username AWS \
