@@ -24,6 +24,20 @@ if [[ ! "$CURRENT_AWS_TARGET" = "$AWS_ACCOUNT" ]]; then
     exit 1
 fi
 
+if [[ $(arch) == 'arm64' ]]; then
+  echo "Hello there!  We're terribly sorry about this, but you seem to be running"
+  echo "on one of the M1 macs, or some other non-x86-based system!"
+  echo "Unfortuantely this 'local build process' script doesn't support this.  It will"
+  echo "cheerfully build an ARM-compatible container, send it to EKS/k8s, which will"
+  echo "promptly choke on it and start throwing inscrutable, hard to debug errors."
+  echo "What you may be able to do is use this script to inform what a CI pipeline"
+  echo "should do, then write/test/deploy that pipeline directly to test it."
+  echo "Again, we are deeply sorry about the inconvenience, but we do wish you the"
+  echo "very best of luck!"
+  exit 1
+fi
+
+
 # Let's try to set a unique-ish namespace for local testing
 if [ $# -eq 0 ]; then
     NAMESPACE=$(whoami)
