@@ -98,3 +98,6 @@ helm upgrade \
 ```
 That should plug n' chug for a minute, then spit out some `kubectl` commands that will have an Internet Accessible URL™ serving up the toy application (it may take up to 5 minutes for DNS to propagate, FWIW).  And that is the manual deploy process, annotated.  You shouldn't need to run everything command-by-command, as that's what the `local-deploy.sh` script is for, but hopefully that gives you some context helpful to completing the homework assignment.  
 
+#Automation Build And Deploy
+  By Using Jenkinsfile we are implimented the Automation through  Jenkinsjob.Inside of Jenkinsfile we are adding some kind of Stages like checkout,build & deployment and postaction.whenever dev branch changes done at the time dev job will triger.Once triger the Job it will fetch the latest code from github then build the dockerfile as a image(Build,Login to ECR,Image push to ECR, Deploy to EKS).Once image deploy to EKS cluster then admin get the email notification.everything perfect like perfomance/scalability wise then he accept the mail.whenever admin accept the mail at the time next job will triger then i will deploy to production environment.
+  Note: He was not accept the mail at the time job will failed
