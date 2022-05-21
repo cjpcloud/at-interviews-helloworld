@@ -101,7 +101,9 @@ That should plug n' chug for a minute, then spit out some `kubectl` commands tha
 #Automation Build And Deploy:
          By Using Jenkinsfile we are implimented the Automation through  Jenkinsjob.Inside of Jenkinsfile we are adding some kind of Stages like checkout,build & deployment and postaction.whenever dev branch changes done at that time dev job will triger.Once triger the Job, it will fetch the latest code from github then build the dockerfile as a image(Build,Login to ECR,Image push to ECR, Deploy to EKS).Once image Build & deploy to EKS cluster then admin get the email notification.everything perfect like perfomance/scalability wise then he will accept the mail.whenever admin accept the mail at that time next job will triger then   deploy To production environment.
   
-Note: He was not accept the mail at the time job will failed
+Note: 
+   1. He was not accept the mail at the time job will failed
+   2. Whenever run the Deploy To Prod stage at that time local-deploy.sh script will excute, Inside script we are adding image  build and deploy commands
 
 
 branchName = "prod"
