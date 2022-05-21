@@ -1,8 +1,5 @@
 
-branchName = "prod"
-qaEmailId ="vijarram.reddy@gmail.com"
-repositoryName = "demo"
-waitingTime = 25
+
 pipeline { 
     agent any 
     stages {
@@ -12,7 +9,7 @@ pipeline {
              }
         }
 		
-		stage ('run script') {
+		stage ('Deploy To Prod') {
           steps {
 sh './local-deploy.sh'        }
         
