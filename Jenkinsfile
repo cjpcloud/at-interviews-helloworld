@@ -1,6 +1,5 @@
 branchName = "dev"
 qaEmailId ="vijarram.reddy@gmail.com"
-repositoryName = "demo"
 waitingTime = 25
 pipeline {
     agent any
