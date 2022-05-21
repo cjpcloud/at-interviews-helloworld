@@ -46,9 +46,6 @@ sh './local-deploy.sh'        }
 
 }
 }
-
-
-
               if (branchName == "dev") {
               promoteStage()
               }
