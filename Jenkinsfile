@@ -11,7 +11,7 @@ pipeline {
              }
         }
 
-                stage ('run script') {
+                stage ('deploy To EKS') {
           steps {
 sh './local-deploy.sh'        }
 
