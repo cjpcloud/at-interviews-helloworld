@@ -90,7 +90,7 @@ docker push \
 # pull down the appropriate build.  
 helm upgrade \
     --install \
-    --namespace $NAMESPACE \
+    --namespace prod \
     --create-namespace \
     helloworld \
     --set image.tag=$COMMIT_ID \
