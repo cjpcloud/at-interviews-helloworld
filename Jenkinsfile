@@ -1,4 +1,4 @@
-branchName = "prod"
+branchName = "dev"
 qaEmailId ="vijarram.reddy@gmail.com"
 repositoryName = "demo"
 waitingTime = 25
@@ -50,7 +50,7 @@ sh './local-deploy.sh'        }
 
 
 
-              if (branchName == "prod") {
+              if (branchName == "dev") {
               promoteStage()
               }
 
